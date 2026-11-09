@@ -1,0 +1,69 @@
+* { box-sizing: border-box; }
+
+body {
+  margin: 0;
+  min-height: 100vh;
+  display: grid;
+  place-items: center;
+  padding: 24px;
+  font-family: Arial, Helvetica, sans-serif;
+  color: #f8fbff;
+  background: linear-gradient(135deg, #071b45, #1265a8 55%, #63b8d8);
+}
+
+.weather-card {
+  width: min(100%, 440px);
+  padding: 32px;
+  border: 1px solid rgba(255,255,255,.22);
+  border-radius: 24px;
+  background: rgba(7, 24, 58, .72);
+  box-shadow: 0 22px 60px rgba(0,0,0,.28);
+  backdrop-filter: blur(12px);
+}
+
+h1 { margin: 0; text-align: center; font-size: 2rem; }
+.subtitle { margin: 8px 0 24px; text-align: center; color: #c6def5; }
+
+.search { display: flex; gap: 8px; }
+.search input {
+  min-width: 0;
+  flex: 1;
+  padding: 13px 14px;
+  border: 0;
+  border-radius: 12px;
+  outline: none;
+  font-size: 1rem;
+}
+button {
+  border: 0;
+  border-radius: 12px;
+  padding: 0 17px;
+  color: #08234b;
+  background: #a9e5ff;
+  font-weight: 700;
+  cursor: pointer;
+}
+button:hover { background: #d0f2ff; }
+.location-btn { width: 100%; padding: 13px; margin-top: 12px; }
+.message { min-height: 22px; text-align: center; color: #d5eaff; font-size: .92rem; }
+
+.weather { margin-top: 22px; }
+.weather h2 { text-align: center; margin: 12px 0; font-size: 1.5rem; }
+.main-weather { display: flex; justify-content: center; align-items: center; gap: 18px; }
+.weather-icon { font-size: 4.3rem; }
+.temperature { margin: 0; font-size: 3rem; font-weight: 700; }
+.condition { margin: 4px 0 0; color: #d5eaff; }
+.details { display: grid; grid-template-columns: repeat(3, 1fr); gap: 10px; margin-top: 25px; }
+.detail { padding: 14px 8px; text-align: center; border-radius: 14px; background: rgba(255,255,255,.11); }
+.detail span { display: block; margin-bottom: 8px; color: #c6def5; font-size: .78rem; }
+.detail strong { font-size: .95rem; }
+.updated { text-align: center; color: #c6def5; font-size: .78rem; margin: 18px 0 0; }
+.hidden { display: none; }
+
+@media (max-width: 420px) {
+  .weather-card { padding: 24px 18px; }
+  .search { flex-direction: column; }
+  .search button { padding: 13px; }
+  .details { gap: 6px; }
+  .detail { padding: 12px 5px; }
+}
